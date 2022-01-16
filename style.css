@@ -1,0 +1,158 @@
+*,html,body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+
+.video-background{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+.main{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index: 3;
+}
+.container{
+    position:relative;
+    height:100%;
+    width:100%;
+}
+.play{
+    position:absolute;
+    left: 670px;
+    top: 470px;
+    color: #ffffff00;
+    z-index: 10;
+}
+#play-svg{
+    cursor: pointer;
+}
+.play-svg{
+    width:626px;
+    height:auto;
+}
+
+
+#play-button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display:none;
+}
+
+.btn{
+    padding: 10px 25px;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    color:rgb(82, 82, 82);
+    border-radius: 10px;
+}
+.btn-primary{
+    background-color: #277FCD!important;
+    color: #ffffff!important;
+}
+
+/* Wallet Connect */
+#wallet-connect{
+    position: absolute;
+    top:20px;
+    right:40px;
+}
+.wallet-connect{
+    position: absolute;
+    top:20px;
+    right:40px;
+}
+#wallet-profile-connect{
+    position: absolute;
+    top:20px;
+    right:40px;
+}
+
+/* Mint */
+
+.mint-svg{
+    width:919px;
+    height:auto;
+}
+
+.mint{
+    position:absolute;
+    top:370px;
+    left:600px;
+    color:#ffffff00;
+    z-index: 7;
+}
+
+#mint-button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display:none;
+}
+
+.market{
+    position:absolute;
+    top:-30px;
+    left:270px;
+    color:#ffffff00;
+    z-index: 6;
+}
+
+#market-button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display:none;
+}
+.market-svg{
+    width:800px;
+    height:auto;
+}
+
+/* Wallet Connect Modal */
+.wallet-connect-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:20;
+    width:30%;
+    height:auto;
+    border:1px solid #ffffff;
+    border-radius: 24px;
+    background-color: rgba(232, 248, 253, 0.2);;
+    backdrop-filter: blur(30px);
+    padding: 30px 30px;
+}
+
+.wallet-connect-modal{
+    display: none;
+}   
+
+#mint-terms-modal{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+#mint-modal{
+    position: absolute;
+    display:none;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Miniter</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <video class="video-background" autoplay loop muted>
+        <source src="./wateranimation_2.webm" type="video/webm">
+    </video>
+    <div class="main">
+        <div class="container">
+            <div class="wallet-connect">
+                <a href="profile.html" class="btn btn-primary">0x4fE7023..Dc345</a>
+            </div>
+            <div id="mint-terms-modal" class="card" style="background-color: #CAE9FF43; backdrop-filter: blur(30px); width:70%;">
+                <div class="card-body" style="display:flex;flex-direction:column;justify-content:center; align-items:center; color:#E8F8FD">
+                    <h1>Terms and Condition</h1>
+                    <p class="px-5">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a est et nibh mollis mattis et at nibh. Integer fermentum nisi ut lacinia accumsan. Vestibulum tristique laoreet turpis a mattis. Aenean gravida placerat enim, gravida rutrum nisi ultricies a. Donec turpis nulla, finibus eu diam vitae, pellentesque cursus nibh. Donec sed augue turpis. Sed sollicitudin elit vel ultrices posuere. Etiam pretium nulla augue, quis lobortis risus euismod vitae. Aenean lectus massa, laoreet a dolor eu, viverra rutrum justo. Mauris lobortis blandit arcu id bibendum. Quisque vel mi ac nunc iaculis mollis sit amet eu urna. Vestibulum quis arcu nisl. Cras vel nunc dolor. Morbi sollicitudin justo eu arcu fringilla, id tempor mi viverra. Nullam pellentesque interdum diam. Praesent pulvinar, quam a malesuada fermentum, quam urna aliquam diam, sed consectetur leo ipsum a ex.
+                        <br/>
+                        Aliquam a tortor in erat fermentum sodales. Curabitur facilisis justo eget venenatis malesuada. Pellentesque vestibulum commodo purus sed venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla enim eros, faucibus nec rhoncus laoreet, semper sed magna.  Nulla a mi eu orci convallis lobortis vitae at orci. Donec eget auctor diam, id ultrices tellus. Sed sed placerat lectus, scelerisque elementum eros. In sit amet molestie dui. Morbi eu ullamcorper felis, ac luctus arcu. Maecenas laoreet erat mi, sed ornare mauris vehicula tincidunt. Nullam nec viverra erat. Morbi accumsan malesuada elit in tincidunt.
+                    </p>  
+                    <div class="form-check px-5">
+                        <input  class="form-check-input" id="terms-check" type="checkbox" />
+                        <label for="">I agree with terms and conditions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a est et nibh mollis mattis et at nibh. Integer fermentum nisi ut lacinia accumsan. </label>
+                    </div>                   
+                </div>
+            </div>
+            <div id="mint-modal" class="card px-4" style="background-color: #CAE9FF43; backdrop-filter: blur(30px); width:50%;">
+                <div class="card-body" style="color:#E8F8FD">
+                    <h1 class="text-center mb-3">Welcome to Minting</h1>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">NFT's to Mint</label>
+                        <input type="number" step="1" max="60" class="form-control bg-transparent text-white" value="1"  id="exampleFormControlInput1" placeholder="Number of NFTs">
+                    </div> 
+                    <div id="canculate-btn" class="text-center">
+                        <button class="btn btn-primary" onclick="canculate()">Calculate</button>
+                    </div> 
+                    <div id="next-phase" style="display:none">
+                        <div class="mb-3">
+                            <h3>Total: 88 MATIC</h3>
+                        </div>  
+                        <div class="mt-3 text-center">
+                            <a href="profile.html" class="btn btn-primary">Mint NFT</a>
+                        </div>         
+                    </div>
+                </div>
+            </div>
+            <div id="continue-btn" class="position-absolute" style="bottom:5%;left:50%;transform: translate(-50%,-50%);">
+                <button onclick="accept()" class="btn btn-primary btn-lg">Continue</button>
+            </div>
+            <div class="position-absolute" style="top:15px;left:40px;">
+                <a href="index.html" class="btn btn-primary">Back</a>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        const termsModal = document.getElementById("mint-terms-modal");
+        const mintModal = document.getElementById("mint-modal");
+        const continueBtn = document.getElementById("continue-btn");
+        const canculateBtn = document.getElementById("canculate-btn");
+        const nextPhase = document.getElementById("next-phase");
+
+        function accept(){
+            termsModal.style.display = "none";
+            continueBtn.style.display = "none";
+            mintModal.style.display="block";
+        }
+
+        function canculate(){
+            canculateBtn.style.display = "none";
+            nextPhase.style.display = "block";
+        }
+
+        // function canculate(){
+        //     canculateBtn.style.display = "none";
+        //     nextPhase.style.display = "block";
+        // }
+
+    </script>
+</body>
+</html>
